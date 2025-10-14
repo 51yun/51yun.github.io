@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://51yun.github.io</id>
+    <title>51cloud</title>
+    <updated>2025-10-14T09:16:42.799Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://51yun.github.io"/>
+    <link rel="self" href="https://51yun.github.io/atom.xml"/>
+    <subtitle>云彩科技有限公司，是一家技术领先的企业级云服务商与上云解决方案提供商,官网 https://51cloud.cloud/</subtitle>
+    <logo>https://51yun.github.io/images/avatar.png</logo>
+    <icon>https://51yun.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2025, 51cloud</rights>
+    <entry>
+        <title type="html"><![CDATA[CloudFront   WAF的速率规则配置]]></title>
+        <id>https://51yun.github.io/post/waf-de-su-lu-gui-ze-pei-zhi/</id>
+        <link href="https://51yun.github.io/post/waf-de-su-lu-gui-ze-pei-zhi/">
+        </link>
+        <updated>2025-10-14T08:17:09.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="注意事项">注意事项</h1>
+<ol>
+<li>此规则的目的是防御常规CC攻击</li>
+<li>演示规则 是限制了每个ip 每分钟最多访问多少次,超过这个限制会被拉黑15分钟</li>
+<li>被拉黑的ip 无法手动解除</li>
+<li>演示规则 仅适合下载业务 和静态页面托管</li>
+</ol>
+<h1 id="创建规则">创建规则</h1>
+<figure data-type="image" tabindex="1"><img src="https://51yun.github.io/post-images/image-20251014163023689.png" alt="image-20251014163023689" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://51yun.github.io/post-images/image-20251014163105365.png" alt="image-20251014163105365" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://51yun.github.io/post-images/image-20251014163407602.png" alt="image-20251014163407602" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://51yun.github.io/post-images/image-20251014163422003.png" alt="image-20251014163422003" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://51yun.github.io/post-images/image-20251014163523733.png" alt="image-20251014163523733" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://51yun.github.io/post-images/image-20251014163533981.png" alt="image-20251014163533981" loading="lazy"></figure>
+<figure data-type="image" tabindex="7"><img src="https://51yun.github.io/post-images/image-20251014163558306.png" alt="image-20251014163558306" loading="lazy"></figure>
+<figure data-type="image" tabindex="8"><img src="https://51yun.github.io/post-images/image-20251014163716615.png" alt="image-20251014163716615" loading="lazy"></figure>
+<figure data-type="image" tabindex="9"><img src="https://51yun.github.io/post-images/image-20251014164329440.png" alt="image-20251014164329440" loading="lazy"></figure>
+<figure data-type="image" tabindex="10"><img src="https://51yun.github.io/post-images/image-20251014164128280.png" alt="image-20251014164128280" loading="lazy"></figure>
+<figure data-type="image" tabindex="11"><img src="https://51yun.github.io/post-images/image-20251014164354257.png" alt="image-20251014164354257" loading="lazy"></figure>
+<figure data-type="image" tabindex="12"><img src="https://51yun.github.io/post-images/image-20251014164405394.png" alt="image-20251014164405394" loading="lazy"></figure>
+<figure data-type="image" tabindex="13"><img src="https://51yun.github.io/post-images/image-20251014164414917.png" alt="image-20251014164414917" loading="lazy"></figure>
+<figure data-type="image" tabindex="14"><img src="https://51yun.github.io/post-images/image-20251014164424897.png" alt="image-20251014164424897" loading="lazy"></figure>
+<p>效果如下</p>
+<figure data-type="image" tabindex="15"><img src="https://51yun.github.io/post-images/image-20251014164511587.png" alt="image-20251014164511587" loading="lazy"></figure>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CloudFront 配合S3的源 用来访问资源]]></title>
+        <id>https://51yun.github.io/post/cloudfront-pei-he-s3-de-yuan-yong-lai-fang-wen-zi-yuan/</id>
+        <link href="https://51yun.github.io/post/cloudfront-pei-he-s3-de-yuan-yong-lai-fang-wen-zi-yuan/">
+        </link>
+        <updated>2025-10-14T08:09:31.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="注意事项">注意事项</h1>
+<ol>
+<li>
+<p>如果你没有创建桶 请参考此前文档 <a href="https://51yun.github.io/post/s3-tong-de-chuang-jian/#%E8%8E%B7%E5%8F%96%E8%AE%BF%E9%97%AE%E5%AF%86%E9%92%A5%E5%92%8C%E7%A7%98%E5%AF%86%E8%AE%BF%E9%97%AE%E5%AF%86%E9%92%A5">传送门</a></p>
+</li>
+<li>
+<p>一定要配合waf规则来使用,以防被攻击者消耗流量,目前我们的客户严重的每小时上万刀,所以一定要注意</p>
+</li>
+<li>
+<p>如果你还没创建waf规则 请先创建规则 参考此前文档 <a href="https://51yun.github.io/post/waf-de-su-lu-gui-ze-pei-zhi/">传送门</a></p>
+</li>
+</ol>
+<h1 id="创建分配">创建分配</h1>
+<figure data-type="image" tabindex="1"><img src="https://51yun.github.io/post-images/image-20251014170022761.png" alt="image-20251014170022761" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://51yun.github.io/post-images/image-20251014170059639.png" alt="image-20251014170059639" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://51yun.github.io/post-images/image-20251014170124600.png" alt="image-20251014170124600" loading="lazy"></figure>
+<h3 id="如果没出现上面的蓝色提示-点这里-传送门">如果没出现上面的蓝色提示 点这里 <a href="https://us-east-1.console.aws.amazon.com/cloudfront/v4/home?region=us-east-1#/distributions/create?mode=legacy">传送门</a></h3>
+<hr>
+<figure data-type="image" tabindex="4"><img src="https://51yun.github.io/post-images/image-20251014170543977.png" alt="image-20251014170543977" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://51yun.github.io/post-images/image-20251014170439048.png" alt="image-20251014170439048" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://51yun.github.io/post-images/image-20251014170710852.png" alt="image-20251014170710852" loading="lazy"></figure>
+<figure data-type="image" tabindex="7"><img src="https://51yun.github.io/post-images/image-20251014170754651.png" alt="image-20251014170754651" loading="lazy"></figure>
+<figure data-type="image" tabindex="8"><img src="https://51yun.github.io/post-images/image-20251014170931875.png" alt="image-20251014170931875" loading="lazy"></figure>
+<figure data-type="image" tabindex="9"><img src="https://51yun.github.io/post-images/image-20251014171002886.png" alt="image-20251014171002886" loading="lazy"></figure>
+<figure data-type="image" tabindex="10"><img src="https://51yun.github.io/post-images/image-20251014171134367.png" alt="image-20251014171134367" loading="lazy"></figure>
+<figure data-type="image" tabindex="11"><img src="https://51yun.github.io/post-images/image-20251014171151779.png" alt="image-20251014171151779" loading="lazy"></figure>
+<figure data-type="image" tabindex="12"><img src="https://51yun.github.io/post-images/image-20251014171258257.png" alt="image-20251014171258257" loading="lazy"></figure>
+<p>到此已经得到了分配域名</p>
+<h1 id="分配域名的使用方法">分配域名的使用方法</h1>
+<p>如 你的分配域名 是   d2oa6e41q2nbq9.cloudfront.net  你桶中根目录下的文件是 123.jar</p>
+<p>那么访问这个文件 就是  https://d2oa6e41q2nbq9.cloudfront.net/123.jar</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[S3 桶的创建]]></title>
+        <id>https://51yun.github.io/post/s3-tong-de-chuang-jian/</id>
+        <link href="https://51yun.github.io/post/s3-tong-de-chuang-jian/">
+        </link>
+        <updated>2025-10-14T07:34:10.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="注意事项">注意事项</h1>
+<ul>
+<li>不要泄露桶名称 以及 区域 ,攻击者会通过这两个信息拼凑出你的桶地址 用来攻击</li>
+<li>不要泄露 访问密钥 和 秘密访问密钥 ,攻击者可能通过这些信息控制你的aws账号,如创建无数个服务器或者其他实例消耗你的费用</li>
+<li>不要关闭 阻止公共访问,因为公共访问无法添加防御,攻击者会通过僵尸网络大量频繁的下载你的资源达到消耗你的流量产生流量费用的情况,目前我们遇到过严重的 一小时消耗上万刀</li>
+<li>如需访问请使用cloudfront 也就是 亚马逊的cdn 并关联waf规则的防御手段 来访问</li>
+</ul>
+<h1 id="创建桶">创建桶</h1>
+<figure data-type="image" tabindex="1"><img src="https://51yun.github.io/post-images/image-20251014154202022.png" alt="image-20251014154202022" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://51yun.github.io/post-images/image-20251014154317453.png" alt="image-20251014154317453" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://51yun.github.io/post-images/image-20251014154410055.png" alt="image-20251014154410055" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://51yun.github.io/post-images/image-20251014154457713.png" alt="image-20251014154457713" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://51yun.github.io/post-images/image-20251014154602706.png" alt="image-20251014154602706" loading="lazy"></figure>
+<h1 id="手动上传文件">手动上传文件</h1>
+<h3 id="点进去需要操作的桶">点进去需要操作的桶</h3>
+<figure data-type="image" tabindex="6"><img src="https://51yun.github.io/post-images/image-20251014154643574.png" alt="image-20251014154643574" loading="lazy"></figure>
+<figure data-type="image" tabindex="7"><img src="https://51yun.github.io/post-images/image-20251014154833622.png" alt="image-20251014154833622" loading="lazy"></figure>
+<figure data-type="image" tabindex="8"><img src="https://51yun.github.io/post-images/image-20251014154911445.png" alt="image-20251014154911445" loading="lazy"></figure>
+<h1 id="代码和程序上传">代码和程序上传</h1>
+<h3 id="获取访问密钥和秘密访问密钥">获取访问密钥和秘密访问密钥</h3>
+<figure data-type="image" tabindex="9"><img src="https://51yun.github.io/post-images/image-20251014155237091.png" alt="image-20251014155237091" loading="lazy"></figure>
+<figure data-type="image" tabindex="10"><img src="https://51yun.github.io/post-images/image-20251014155259934.png" alt="image-20251014155259934" loading="lazy"></figure>
+<figure data-type="image" tabindex="11"><img src="https://51yun.github.io/post-images/image-20251014155330609.png" alt="image-20251014155330609" loading="lazy"></figure>
+<figure data-type="image" tabindex="12"><img src="https://51yun.github.io/post-images/image-20251014155415268.png" alt="image-20251014155415268" loading="lazy"></figure>
+<figure data-type="image" tabindex="13"><img src="https://51yun.github.io/post-images/image-20251014155431508.png" alt="image-20251014155431508" loading="lazy"></figure>
+<figure data-type="image" tabindex="14"><img src="https://51yun.github.io/post-images/image-20251014155531943.png" alt="image-20251014155531943" loading="lazy"></figure>
+<h3 id="注意事项-2">注意事项</h3>
+<ul>
+<li>如果你的程序不能上传文件,那么有一种可能你需要考虑 那就是代码中的sdk是否是官方的sdk,代码是否遵循了官方的演示代码,官方文档链接参考 <a href="https://docs.aws.amazon.com/zh_cn/sdk-for-java/v1/developer-guide/examples-s3-objects.html#upload-object"><strong>Amazon S3 对象执行操作</strong></a></li>
+<li>代码和程序操作S3桶 只需要 四个必要信息  1 访问密钥  2 秘密访问密钥 3 区域代码  4 桶名称 其他的信息不影响桶的操作</li>
+<li>区域代码获取 在桶列表中可以看到,AWS 区域一列中 英文部分就是,  找不到点  <a href="https://ap-southeast-1.console.aws.amazon.com/s3/buckets?region=ap-southeast-1&amp;bucketType=general">链接</a></li>
+<li><img src="https://51yun.github.io/post-images/image-20251014160325442.png" alt="image-20251014160325442" loading="lazy"></li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS EC2服务器磁盘扩容]]></title>
+        <id>https://51yun.github.io/post/aws-ec2-fu-wu-qi-ci-pan-kuo-rong/</id>
+        <link href="https://51yun.github.io/post/aws-ec2-fu-wu-qi-ci-pan-kuo-rong/">
+        </link>
+        <updated>2025-10-08T08:16:37.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="注意事项">注意事项</h3>
+<ul>
+<li>服务器无需关机或重启 服务器无需关机或重启 服务器无需关机或重启 重要的事情说三遍</li>
+<li>操作前建议先备份数据有数据丢失风险</li>
+<li>如果你现在的实例类型是带有D字母的 比如 c5d,请检查下是否使用的是自带的nvme磁盘 如果是请不要关机并且立即备份数据,  nvme磁盘不能作为持久盘 关机后大概率会数据丢失</li>
+</ul>
+<h3 id="1-修改ebs卷大小">1 修改EBS卷大小</h3>
+<p>找到卷并点进去</p>
+<figure data-type="image" tabindex="1"><img src="https://51yun.github.io/post-images/image-20251008162522985.png" alt="image-20251008162522985" loading="lazy"></figure>
+<p>修改卷大小</p>
+<figure data-type="image" tabindex="2"><img src="https://51yun.github.io/post-images/image-20251008162611857.png" alt="image-20251008162611857" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://51yun.github.io/post-images/image-20251008162634093.png" alt="image-20251008162634093" loading="lazy"></figure>
+<h3 id="2-更新系统中-文件系统-使得磁盘大小生效">2 更新系统中 文件系统 使得磁盘大小生效</h3>
+<p>如有分区请参考官方文档: <a href="https://docs.aws.amazon.com/zh_cn/ebs/latest/userguide/recognize-expanded-volume-linux.html"><strong>EBS 卷大小后扩展文件系统</strong></a></p>
+<p>下面演示无分区情况的linux 操作</p>
+<pre><code class="language-shell">#在以下示例输出中，根卷（nvme0n1）有两个分区（nvme0n1p1 和 nvme0n1p128），而额外的卷（nvme1n1）没有分区。我们扩容没有分区的卷
+
+[ec2-user ~]$ sudo lsblk
+NAME          MAJ:MIN RM SIZE RO TYPE MOUNTPOINT
+nvme1n1       259:0    0  30G  0 disk /data
+nvme0n1       259:1    0  16G  0 disk
+└─nvme0n1p1   259:2    0   8G  0 part /
+└─nvme0n1p128 259:3    0   1M  0 part
+
+
+#nvme1n1 和 nvme0n1 是两个卷的名称 其中nvme0n1 有两个分区
+#而 nvme0n1p1  nvme0n1p128 是分区名称和编号  分别是1 和128 
+#下面扩容 没有分区的nvme1n1 
+</code></pre>
+<p>下面开始扩容文件系统到没有分区的卷</p>
+<p>1 查看文件系统名称 和格式还有挂在路径</p>
+<pre><code class="language-shell">[ec2-user ~]$ df -hT
+Filesystem      Type  Size  Used Avail Use% Mounted on 
+/dev/nvme0n1p1  xfs   8.0G  1.6G  6.5G  20% / 
+/dev/nvme1n1    xfs   8.0G   33M  8.0G   1% /data
+#Filesystem 一列 为文件系统名称
+#Type 一列为 文件系统格式
+#最后面一列为 挂在路径
+</code></pre>
+<p>2 XFS 文件系统使用下面方法</p>
+<pre><code class="language-shell">[ec2-user ~]$ ``sudo xfs_growfs -d /date
+#注意 /date 是挂载路径  如果此时你扩容的是系统盘 那么就是 /
+</code></pre>
+<p>3 Ext4 文件系统</p>
+<pre><code class="language-shell">[ec2-user ~]$ ``sudo resize2fs /dev/nvme1n1 
+#/dev/nvme1n1  为文件系统名称 
+</code></pre>
+<p>4 验证是否与修改后的卷大小相同</p>
+<pre><code class="language-shell">[ec2-user ~]$ df -hT
+Filesystem      Type  Size    Used   Avail  Use%  Mounted on 
+/dev/nvme0n1p1  xfs   8.0G    1.6G   6.5G    20%  / 
+/dev/nvme1n1    xfs   100.0G   33M   100.0G   1%  /data
+#此处发现 /dev/nvme1n1 已经变为100g 说明已经成功了
+</code></pre>
+<h3 id="最后我还要重新说一下-所有操作的前提下-建议都要提前备份数据">最后我还要重新说一下 所有操作的前提下 建议都要提前备份数据</h3>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[谷歌虚拟机 更换IP]]></title>
+        <id>https://51yun.github.io/post/gu-ge-xu-ni-ji-geng-huan-ip/</id>
+        <link href="https://51yun.github.io/post/gu-ge-xu-ni-ji-geng-huan-ip/">
+        </link>
+        <updated>2025-10-06T07:00:41.000Z</updated>
+        <content type="html"><![CDATA[<p>先登陆谷歌控制台，进入要更换Ip的服务器</p>
+<figure data-type="image" tabindex="1"><img src="https://51yun.github.io/post-images/file0001-1759734166527-1.png" alt="img" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://51yun.github.io/post-images/file0002-1759734166527-2.png" alt="img" loading="lazy"></figure>
+<p>以下外部IPv4地址，默认是临时就点下面的创建IP地址输入名称后，保存即可。如果之前已是静态Ip，这里选择临时保存即可。</p>
+<figure data-type="image" tabindex="3"><img src="https://51yun.github.io/post-images/file0003.png" alt="img" loading="lazy"></figure>
+<p>点下面的保存后等会就会有新IP出现。</p>
+<p>以下是如何删除没用的静态IP：</p>
+<figure data-type="image" tabindex="4"><img src="https://51yun.github.io/post-images/file0004.png" alt="img" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://51yun.github.io/post-images/file0005.png" alt="img" loading="lazy"></figure>
+<p>静态IP不用了记得删除，不删除会扣费</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[谷歌GCP云 创建虚拟机实例]]></title>
+        <id>https://51yun.github.io/post/gu-ge-gcp-yun-chuang-jian-xu-ni-ji-shi-li/</id>
+        <link href="https://51yun.github.io/post/gu-ge-gcp-yun-chuang-jian-xu-ni-ji-shi-li/">
+        </link>
+        <updated>2025-10-06T06:54:48.000Z</updated>
+        <content type="html"><![CDATA[<ol>
+<li>
+<h5 id="首先是能访问海外网站的电脑上要能成功登陆所授权的gmail邮箱">首先是能访问海外网站的电脑上要能成功登陆所授权的gmail邮箱：</h5>
+</li>
+<li>
+<h5 id="通过点击专属链接登入gcp云平台">通过点击专属链接登入GCP云平台：</h5>
+</li>
+<li>
+<h5 id="创建vm实例">创建VM实例：</h5>
+</li>
+</ol>
+<figure data-type="image" tabindex="1"><img src="https://51yun.github.io/post-images/file0001.png" alt="img" loading="lazy"></figure>
+<h5 id="a在左侧的菜单中找到-compute-engine-虚拟机-虚拟机实例-创建vm实例">a在左侧的菜单中找到 Compute Engine –虚拟机-虚拟机实例-创建VM实例</h5>
+<h5 id="b通过创建实例或者单击加号来创建一个虚拟机">b通过<code>创建实例</code>或者单击加号来创建一个虚拟机。</h5>
+<h5 id="名称随意输入机器名称">·     名称：随意输入，机器名称</h5>
+<h5 id="区域建议新加坡asia-southeast-b">·     区域：建议新加坡asia-southeast-b</h5>
+<h5 id="机器配置通用系列-e2-medium2-vcpu-4gb-ram">·     机器配置：通用系列 – E2-medium(2 vCPU, 4GB RAM)</h5>
+<h5 id="启动磁盘单击更改-centos-7">·     启动磁盘单击更改 – <em><strong>*CentOS 7*</strong></em></h5>
+<h5 id="防火墙允许http流量允许https流量一定记得勾选">·     <em><strong>*防火墙：允许HTTP流量，允许HTTPS流量（一定记得勾选）*</strong></em></h5>
+<figure data-type="image" tabindex="2"><img src="https://51yun.github.io/post-images/file0001-1759733841553-2.png" alt="img" loading="lazy"></figure>
+<p>默认是E2系列的机器，如果对于CPU要求性能高些，可选N2系列</p>
+<figure data-type="image" tabindex="3"><img src="https://51yun.github.io/post-images/file0002.png" alt="img" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://51yun.github.io/post-images/file0001-1759733849403-5.png" alt="img" loading="lazy"></figure>
+<p>修改系统为cenots7,ubuntu也是同样方法</p>
+<figure data-type="image" tabindex="5"><img src="https://51yun.github.io/post-images/file0001-1759733862639-8.png" alt="img" loading="lazy"></figure>
+<p>点创建稍等30秒VM就好了</p>
+<p>Google Compute Engine(GCE)VM实例列表中新建好VM后，在我们想要开启root用户密码登录的VM实例列中的“SSH”菜单选项下，选择“在浏览器窗口中打开”。</p>
+<figure data-type="image" tabindex="6"><img src="https://51yun.github.io/post-images/file0002-1759733862639-7.png" alt="img" loading="lazy"></figure>
+<p>注：如果本地用代理方式访问谷歌：会有如下图所示：</p>
+<figure data-type="image" tabindex="7"><img src="https://51yun.github.io/post-images/image-20251006145750369.png" alt="image-20251006145750369" loading="lazy"></figure>
+<p>点“在不使用Cloud Identity-Aware Proxy的情况下重试”链接稍等就可以.</p>
+<p>然后使用sudo -i命令提升用户权限，切换为root用户。</p>
+<pre><code class="language-shell">sudo su - root
+</code></pre>
+<p>Centos,ubuntu等系统然后编辑系统配置文件sshd_config</p>
+<pre><code class="language-shell">vi /etc/ssh/sshd_config
+</code></pre>
+<p>进入编辑模式，输入法切换为英文按“i”进入编辑修改模式。</p>
+<p>修改其中信息</p>
+<pre><code class="language-shell"># Authenticat ion:
+PermitRootLogin yes //把默认的no，改为yes
+</code></pre>
+<p>在往下翻</p>
+<pre><code># To di sable tunne led clear text pas swords, change to no here! 
+PasswordAuthentication yes  //把默认的no，改为yes
+</code></pre>
+<p>然后按“esc”，输入“:wq”进行编辑保存。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[微软云 vm配置多个ip]]></title>
+        <id>https://51yun.github.io/post/wei-ruan-yun-vm-pei-zhi-duo-ge-ip/</id>
+        <link href="https://51yun.github.io/post/wei-ruan-yun-vm-pei-zhi-duo-ge-ip/">
+        </link>
+        <updated>2025-10-06T06:06:12.000Z</updated>
+        <summary type="html"><![CDATA[<p>如果你还没有创建虚拟机实例 请参考这里  <a href="https://51yun.github.io/post/wei-ruan-yun-chuang-jian-xu-ni-ji/#1%E7%99%BB%E5%BD%95%E5%90%8E%E6%90%9C%E7%B4%A2vm-%E8%BF%9B%E5%85%A5%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%A1%B5%E9%9D%A2">创建虚拟机实例教学</a></p>
+]]></summary>
+        <content type="html"><![CDATA[<p>如果你还没有创建虚拟机实例 请参考这里  <a href="https://51yun.github.io/post/wei-ruan-yun-chuang-jian-xu-ni-ji/#1%E7%99%BB%E5%BD%95%E5%90%8E%E6%90%9C%E7%B4%A2vm-%E8%BF%9B%E5%85%A5%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%A1%B5%E9%9D%A2">创建虚拟机实例教学</a></p>
+<!-- more -->
+<h3 id="找到虚拟机实例">找到虚拟机实例</h3>
+<figure data-type="image" tabindex="1"><img src="https://51yun.github.io/post-images/image-20251006141224160.png" alt="image-20251006141224160" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://51yun.github.io/post-images/image-20251006141238249.png" alt="image-20251006141238249" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://51yun.github.io/post-images/image-20251006141300862.png" alt="image-20251006141300862" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://51yun.github.io/post-images/image-20251006141313932.png" alt="image-20251006141313932" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://51yun.github.io/post-images/image-20251006141351544.png" alt="image-20251006141351544" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://51yun.github.io/post-images/image-20251006141423118.png" alt="image-20251006141423118" loading="lazy"></figure>
+<h5 id="辅助ip-还需要改成静态-以免服务器配置好后-ip变动-还要修改服务器配置">辅助ip 还需要改成静态 以免服务器配置好后 ip变动 还要修改服务器配置</h5>
+<figure data-type="image" tabindex="7"><img src="https://51yun.github.io/post-images/image-20251006141607998.png" alt="image-20251006141607998" loading="lazy"></figure>
+<figure data-type="image" tabindex="8"><img src="https://51yun.github.io/post-images/image-20251006141710562.png" alt="image-20251006141710562" loading="lazy"></figure>
+<figure data-type="image" tabindex="9"><img src="https://51yun.github.io/post-images/image-20251006141728778.png" alt="image-20251006141728778" loading="lazy"></figure>
+<h3 id="服务器内部配置">服务器内部配置</h3>
+<h5 id="1-ssh登录后sudo-su-root-切换到管理员用户后使用-ip-a-命令-找到需要的信息-如-网卡名称-子网掩码">1 ssh登录后，sudo su - root 切换到管理员用户后，使用 ip a 命令 找到需要的信息 如 网卡名称 子网掩码</h5>
+<figure data-type="image" tabindex="10"><img src="https://51yun.github.io/post-images/image-20251006141801017.png" alt="image-20251006141801017" loading="lazy"></figure>
+<h5 id="2-根据上面得到的信息-添加希望ip到系统-私网ip生效了-公网就生效了-因为是关联关系">2 根据上面得到的信息 添加希望ip到系统 私网ip生效了 公网就生效了 因为是关联关系</h5>
+<pre><code class="language-shell"># 已知信息 网卡 eth0 子网掩码24
+# 上面控制台的时候 已经得知我们新建的 两个辅助ip 为 10.0.0.5 10.0.0.6
+#注意 命令中的ip 子网 和网卡名称 替换成自己的
+#以下操作需要使用 sudo su - root 命令切换到管理员再操作
+
+# 使用命令添加私网ip(值钱配置静态ip的时候能看到每个公网ip 对应的私网ip) eth0是上一步得到的网卡名称
+root@name:~# ip addr add 10.0.0.5/24 dev eth0
+root@name:~# ip addr add 10.0.0.6/24 dev eth0
+
+# 验证是否添加成功
+root@name:~# ip addr show eth0
+2: eth0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc mq state UP group default qlen
+1000
+ link/ether 60:45:bd:57:aa:b0 brd ff:ff:ff:ff:ff:ff
+ inet 10.0.0.4/24 metric 100 brd 10.0.0.255 scope global eth0
+ valid_lft forever preferred_lft forever
+ inet 10.0.0.5/24 scope global secondary eth0
+ valid_lft forever preferred_lft forever
+ inet 10.0.0.6/24 scope global secondary eth0
+ valid_lft forever preferred_lft forever
+ inet6 fe80::6245:bdff:fe57:aab0/64 scope link
+ valid_lft forever preferred_lft foreve
+#上面验证 ip已经生效 但重启后 还会失效 需要配置开启自动添加
+
+</code></pre>
+<h3 id="3-开机自动添加ip">3 开机自动添加ip</h3>
+<figure data-type="image" tabindex="11"><img src="https://51yun.github.io/post-images/image-20251006142152851.png" alt="image-20251006142152851" loading="lazy"></figure>
+<pre><code class="language-shell">cat &lt;&lt;EOF &gt;/etc/rc.local
+#!/bin/sh -e
+ip addr add 10.0.0.5/24 dev eth0
+ip addr add 10.0.0.6/24 dev eth0
+exit 0
+EOF
+##上面的命令全部复制后粘贴到命令行运行 不是一行行粘贴 注意替换成你的私网ip 和网卡名称
+</code></pre>
+<pre><code class="language-shell">##rc.local 文件添加执行权限
+chmod +x /etc/rc.local
+#此时有些系统如centOS 等 重启已经可以自动添加ip了 必须 重启确认一下
+</code></pre>
+<h3 id="4-rclocal-不生效问题解决重启确认不生效后操作否则可能会启动不起来">4 rc.local 不生效问题解决（重启确认不生效后操作否则可能会启动不起来）</h3>
+<p>已知 乌班图 22-24 debian9-12 重启都不生效的</p>
+<figure data-type="image" tabindex="12"><img src="https://51yun.github.io/post-images/image-20251006142444002.png" alt="image-20251006142444002" loading="lazy"></figure>
+<pre><code class="language-shell">cat &lt;&lt;EOF &gt;/etc/systemd/system/rc-local.service
+[Unit]
+Description=/etc/rc.local
+ConditionFileIsExecutable=/etc/rc.local
+After=network.target
+[Service]
+Type=forking
+ExecStart=/etc/rc.local start
+TimeoutSec=0
+RemainAfterExit=yes
+GuessMainPID=no
+[Install]
+WantedBy=multi-user.target
+EOF
+#上面的命令后 全部复制粘贴运行 不是一行行粘贴
+</code></pre>
+<p>自启动生效配置</p>
+<pre><code>chmod +x /etc/rc.local &amp;&amp; systemctl daemon-reload &amp;&amp; systemctl enable rc-local
+</code></pre>
+<h5 id="最后就是重启-验证是否-自动开启辅助ip-重启命令-init-6-或-reboot-使用-ip-a-命令验证">最后就是重启 验证是否 自动开启辅助ip 重启命令 init 6 或 reboot 使用 ip a 命令验证</h5>
+<figure data-type="image" tabindex="13"><img src="https://51yun.github.io/post-images/image-20251006142710250.png" alt="image-20251006142710250" loading="lazy"></figure>
+<h5 id="这里看到-重启后ip生效了-此时-对应的两个新的公网ip-也生效了">这里看到 重启后ip生效了 此时 对应的两个新的公网ip 也生效了</h5>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[微软云 创建虚拟机]]></title>
+        <id>https://51yun.github.io/post/wei-ruan-yun-chuang-jian-xu-ni-ji/</id>
+        <link href="https://51yun.github.io/post/wei-ruan-yun-chuang-jian-xu-ni-ji/">
+        </link>
+        <updated>2025-10-06T05:43:23.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="1登录后搜索vm-进入虚拟机页面">1登录后搜索vm 进入虚拟机页面</h3>
+<figure data-type="image" tabindex="1"><img src="https://51yun.github.io/post-images/image-20251006134814617.png" alt="image-20251006134814617" loading="lazy"></figure>
+<h3 id="2点击创建">2点击创建</h3>
+<figure data-type="image" tabindex="2"><img src="https://51yun.github.io/post-images/image-20251006134855758.png" alt="image-20251006134855758" loading="lazy"></figure>
+<h3 id="3-创建过程">3 创建过程</h3>
+<figure data-type="image" tabindex="3"><img src="https://51yun.github.io/post-images/image-20251006134931801.png" alt="image-20251006134931801" loading="lazy"></figure>
+<h5 id="这个是区域对照表上面的区域可以对照这个-其中东亚就是香港">这个是区域对照表上面的区域可以对照这个 其中东亚就是香港</h5>
+<figure data-type="image" tabindex="4"><img src="https://51yun.github.io/post-images/image-20251006135009860.png" alt="image-20251006135009860" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://51yun.github.io/post-images/image-20251006135103743.png" alt="image-20251006135103743" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://51yun.github.io/post-images/image-20251006135119149.png" alt="image-20251006135119149" loading="lazy"></figure>
+<figure data-type="image" tabindex="7"><img src="https://51yun.github.io/post-images/image-20251006135132914.png" alt="image-20251006135132914" loading="lazy"></figure>
+<figure data-type="image" tabindex="8"><img src="https://51yun.github.io/post-images/image-20251006135152315.png" alt="image-20251006135152315" loading="lazy"></figure>
+<figure data-type="image" tabindex="9"><img src="https://51yun.github.io/post-images/image-20251006135210990.png" alt="image-20251006135210990" loading="lazy"></figure>
+<figure data-type="image" tabindex="10"><img src="https://51yun.github.io/post-images/image-20251006135227465.png" alt="image-20251006135227465" loading="lazy"></figure>
+<h3 id="4安全组的配置">4安全组的配置</h3>
+<figure data-type="image" tabindex="11"><img src="https://51yun.github.io/post-images/image-20251006135258397.png" alt="image-20251006135258397" loading="lazy"></figure>
+<figure data-type="image" tabindex="12"><img src="https://51yun.github.io/post-images/image-20251006135312648.png" alt="image-20251006135312648" loading="lazy"></figure>
+<figure data-type="image" tabindex="13"><img src="https://51yun.github.io/post-images/image-20251006135329961.png" alt="image-20251006135329961" loading="lazy"></figure>
+<h3 id="5-注意事项">5 注意事项</h3>
+<ol>
+<li>由上方流程得到 ip 用户 密码 三个信息后 使用ssh登录 默认端口22</li>
+<li>登录后是普通用户 使用 sudo su - root 命令切换到root用户 再操作 也可以使用 sudo -i 命令切换 但环境变量还是 普通用户 推荐 sudo su - root</li>
+<li>用户密码 留存好 否则找回比较麻烦</li>
+</ol>
+]]></content>
+    </entry>
+</feed>
