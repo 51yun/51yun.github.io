@@ -1,0 +1,252 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    AWS创建EC2服务器 | 51云彩 云服务商
+</title>
+<link rel="shortcut icon" href="https://51yun.github.io/favicon.ico?v=1762054989369">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://51yun.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://51yun.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://51yun.github.io">
+                <img class="avatar" src="https://51yun.github.io/images/avatar.png?v=1762054989369" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    51云彩 云服务商
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                        <li>
+                            <a href="https://51cloud.cloud" class="menu" target="_blank">
+                                首页
+                            </a>
+                        </li>
+                        
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    所有文档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    文章分类
+                                </a>
+                            </li>
+                            
+                                
+                    
+                        <li>
+                            <a href="https://51cloud.cloud/" class="menu" target="_blank">
+                                官方网站
+                            </a>
+                        </li>
+                        
+                                
+                    
+                        <li>
+                            <a href="https://t.me/sss344dd" class="menu" target="_blank">
+                                联系我们
+                            </a>
+                        </li>
+                        
+                                
+                    
+                        <li>
+                            <a href="https://t.me/sss344dd" class="menu" target="_blank">
+                                平台代理充值
+                            </a>
+                        </li>
+                        
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            AWS创建EC2服务器
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2025-10-21</time>
+                            
+                                <a href="https://51yun.github.io/tag/0redv4aJpq/" class="post-tag i-tag
+                            i-tag-other_1">
+                            #AWS
+                        </a>
+                                
+                        </div>
+                        
+                                <div class="post-content">
+                                    <h1 id="注意事项">注意事项</h1>
+<ul>
+<li>亚马逊AWS云的EC2服务器 不支持密码ssh登录,默认仅支持 普通用户使用密钥文件登录,登录后使用sudo su - root 命令切换到root 再操作</li>
+<li>密钥文件创建后浏览器会自动下载, 注意留存 丢失无法找回</li>
+<li>不同操作系统的登录用户名不同,比如  centos操作系统用户名是centos  乌班图是ubuntu   debian是 admin , 还有些系统是 ec2-user 或者cloud-user</li>
+</ul>
+<h1 id="创建实例">创建实例</h1>
+<figure data-type="image" tabindex="1"><img src="https://51yun.github.io/post-images/image-20251021140525283.png" alt="image-20251021140525283" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://51yun.github.io/post-images/image-20251021140616645.png" alt="image-20251021140616645" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://51yun.github.io/post-images/image-20251021141053399.png" alt="image-20251021141053399" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://51yun.github.io/post-images/image-20251021141114970.png" alt="image-20251021141114970" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://51yun.github.io/post-images/image-20251021141416879.png" alt="image-20251021141416879" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://51yun.github.io/post-images/image-20251021141432542.png" alt="image-20251021141432542" loading="lazy"></figure>
+<figure data-type="image" tabindex="7"><img src="https://51yun.github.io/post-images/image-20251021141527670.png" alt="image-20251021141527670" loading="lazy"></figure>
+<figure data-type="image" tabindex="8"><img src="https://51yun.github.io/post-images/image-20251021141604332.png" alt="image-20251021141604332" loading="lazy"></figure>
+<figure data-type="image" tabindex="9"><img src="https://51yun.github.io/post-images/image-20251021141702552.png" alt="image-20251021141702552" loading="lazy"></figure>
+<figure data-type="image" tabindex="10"><img src="https://51yun.github.io/post-images/image-20251021141748854.png" alt="image-20251021141748854" loading="lazy"></figure>
+<figure data-type="image" tabindex="11"><img src="https://51yun.github.io/post-images/image-20251021141842291.png" alt="image-20251021141842291" loading="lazy"></figure>
+<figure data-type="image" tabindex="12"><img src="https://51yun.github.io/post-images/image-20251021141921294.png" alt="image-20251021141921294" loading="lazy"></figure>
+<h3 id="这里可以自己添加安全组规则-图中演示的是-端口全开">这里可以自己添加安全组规则  图中演示的是 端口全开</h3>
+<figure data-type="image" tabindex="13"><img src="https://51yun.github.io/post-images/image-20251021142013856.png" alt="image-20251021142013856" loading="lazy"></figure>
+<h3 id="配置磁盘大小-也可以多个硬盘-就点添加新卷">配置磁盘大小  也可以多个硬盘 就点添加新卷</h3>
+<figure data-type="image" tabindex="14"><img src="https://51yun.github.io/post-images/image-20251021142147158.png" alt="image-20251021142147158" loading="lazy"></figure>
+<h1 id="绑定弹性ip">绑定弹性ip</h1>
+<p><a href="https://51yun.github.io//post/aws-ec2-fu-wu-qi-bang-ding-dan-xing-ip/">参考文档</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://51yun.github.io/post/cloudfront-kua-yu-pei-zhi/">
+                                <h3 class="post-title">
+                                    Cloudfront 跨域配置
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li><a href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">注意事项</a></li>
+<li><a href="#%E5%88%9B%E5%BB%BA%E5%AE%9E%E4%BE%8B">创建实例</a><br>
+*
+<ul>
+<li><a href="#%E8%BF%99%E9%87%8C%E5%8F%AF%E4%BB%A5%E8%87%AA%E5%B7%B1%E6%B7%BB%E5%8A%A0%E5%AE%89%E5%85%A8%E7%BB%84%E8%A7%84%E5%88%99-%E5%9B%BE%E4%B8%AD%E6%BC%94%E7%A4%BA%E7%9A%84%E6%98%AF-%E7%AB%AF%E5%8F%A3%E5%85%A8%E5%BC%80">这里可以自己添加安全组规则  图中演示的是 端口全开</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AE%E7%A3%81%E7%9B%98%E5%A4%A7%E5%B0%8F-%E4%B9%9F%E5%8F%AF%E4%BB%A5%E5%A4%9A%E4%B8%AA%E7%A1%AC%E7%9B%98-%E5%B0%B1%E7%82%B9%E6%B7%BB%E5%8A%A0%E6%96%B0%E5%8D%B7">配置磁盘大小  也可以多个硬盘 就点添加新卷</a></li>
+</ul>
+</li>
+<li><a href="#%E7%BB%91%E5%AE%9A%E5%BC%B9%E6%80%A7ip">绑定弹性ip</a></li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by 51cloud.cloud
+ | 
+  <a class="rss" href="https://51yun.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

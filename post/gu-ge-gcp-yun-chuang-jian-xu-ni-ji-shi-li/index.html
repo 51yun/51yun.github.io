@@ -1,0 +1,291 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    谷歌GCP云 创建虚拟机实例 | 51云彩 云服务商
+</title>
+<link rel="shortcut icon" href="https://51yun.github.io/favicon.ico?v=1762054989369">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://51yun.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://51yun.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://51yun.github.io">
+                <img class="avatar" src="https://51yun.github.io/images/avatar.png?v=1762054989369" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    51云彩 云服务商
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                        <li>
+                            <a href="https://51cloud.cloud" class="menu" target="_blank">
+                                首页
+                            </a>
+                        </li>
+                        
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    所有文档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    文章分类
+                                </a>
+                            </li>
+                            
+                                
+                    
+                        <li>
+                            <a href="https://51cloud.cloud/" class="menu" target="_blank">
+                                官方网站
+                            </a>
+                        </li>
+                        
+                                
+                    
+                        <li>
+                            <a href="https://t.me/sss344dd" class="menu" target="_blank">
+                                联系我们
+                            </a>
+                        </li>
+                        
+                                
+                    
+                        <li>
+                            <a href="https://t.me/sss344dd" class="menu" target="_blank">
+                                平台代理充值
+                            </a>
+                        </li>
+                        
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            谷歌GCP云 创建虚拟机实例
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2025-10-06</time>
+                            
+                                <a href="https://51yun.github.io/tag/TUrYf3mPal/" class="post-tag i-tag
+                            i-tag-other_3">
+                            #谷歌GCP云
+                        </a>
+                                
+                        </div>
+                        
+                                <div class="post-content">
+                                    <ol>
+<li>
+<h5 id="首先是能访问海外网站的电脑上要能成功登陆所授权的gmail邮箱">首先是能访问海外网站的电脑上要能成功登陆所授权的gmail邮箱：</h5>
+</li>
+<li>
+<h5 id="通过点击专属链接登入gcp云平台">通过点击专属链接登入GCP云平台：</h5>
+</li>
+<li>
+<h5 id="创建vm实例">创建VM实例：</h5>
+</li>
+</ol>
+<figure data-type="image" tabindex="1"><img src="https://51yun.github.io/post-images/file0001.png" alt="img" loading="lazy"></figure>
+<h5 id="a在左侧的菜单中找到-compute-engine-虚拟机-虚拟机实例-创建vm实例">a在左侧的菜单中找到 Compute Engine –虚拟机-虚拟机实例-创建VM实例</h5>
+<h5 id="b通过创建实例或者单击加号来创建一个虚拟机">b通过<code>创建实例</code>或者单击加号来创建一个虚拟机。</h5>
+<h5 id="名称随意输入机器名称">·     名称：随意输入，机器名称</h5>
+<h5 id="区域建议新加坡asia-southeast-b">·     区域：建议新加坡asia-southeast-b</h5>
+<h5 id="机器配置通用系列-e2-medium2-vcpu-4gb-ram">·     机器配置：通用系列 – E2-medium(2 vCPU, 4GB RAM)</h5>
+<h5 id="启动磁盘单击更改-centos-7">·     启动磁盘单击更改 – <em><strong>*CentOS 7*</strong></em></h5>
+<h5 id="防火墙允许http流量允许https流量一定记得勾选">·     <em><strong>*防火墙：允许HTTP流量，允许HTTPS流量（一定记得勾选）*</strong></em></h5>
+<figure data-type="image" tabindex="2"><img src="https://51yun.github.io/post-images/file0001-1759733841553-2.png" alt="img" loading="lazy"></figure>
+<p>默认是E2系列的机器，如果对于CPU要求性能高些，可选N2系列</p>
+<figure data-type="image" tabindex="3"><img src="https://51yun.github.io/post-images/file0002.png" alt="img" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://51yun.github.io/post-images/file0001-1759733849403-5.png" alt="img" loading="lazy"></figure>
+<p>修改系统为cenots7,ubuntu也是同样方法</p>
+<figure data-type="image" tabindex="5"><img src="https://51yun.github.io/post-images/file0001-1759733862639-8.png" alt="img" loading="lazy"></figure>
+<p>点创建稍等30秒VM就好了</p>
+<p>Google Compute Engine(GCE)VM实例列表中新建好VM后，在我们想要开启root用户密码登录的VM实例列中的“SSH”菜单选项下，选择“在浏览器窗口中打开”。</p>
+<figure data-type="image" tabindex="6"><img src="https://51yun.github.io/post-images/file0002-1759733862639-7.png" alt="img" loading="lazy"></figure>
+<p>注：如果本地用代理方式访问谷歌：会有如下图所示：</p>
+<figure data-type="image" tabindex="7"><img src="https://51yun.github.io/post-images/image-20251006145750369.png" alt="image-20251006145750369" loading="lazy"></figure>
+<p>点“在不使用Cloud Identity-Aware Proxy的情况下重试”链接稍等就可以.</p>
+<p>然后使用sudo -i命令提升用户权限，切换为root用户。</p>
+<pre><code class="language-shell">sudo su - root
+</code></pre>
+<p>Centos,ubuntu等系统然后编辑系统配置文件sshd_config</p>
+<pre><code class="language-shell">vi /etc/ssh/sshd_config
+</code></pre>
+<p>进入编辑模式，输入法切换为英文按“i”进入编辑修改模式。</p>
+<p>修改其中信息</p>
+<pre><code class="language-shell"># Authenticat ion:
+PermitRootLogin yes //把默认的no，改为yes
+</code></pre>
+<p>在往下翻</p>
+<pre><code># To di sable tunne led clear text pas swords, change to no here! 
+PasswordAuthentication yes  //把默认的no，改为yes
+</code></pre>
+<p>然后按“esc”，输入“:wq”进行编辑保存。</p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://51yun.github.io/post/wei-ruan-yun-vm-pei-zhi-duo-ge-ip/">
+                                <h3 class="post-title">
+                                    微软云 vm配置多个ip
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E9%A6%96%E5%85%88%E6%98%AF%E8%83%BD%E8%AE%BF%E9%97%AE%E6%B5%B7%E5%A4%96%E7%BD%91%E7%AB%99%E7%9A%84%E7%94%B5%E8%84%91%E4%B8%8A%E8%A6%81%E8%83%BD%E6%88%90%E5%8A%9F%E7%99%BB%E9%99%86%E6%89%80%E6%8E%88%E6%9D%83%E7%9A%84gmail%E9%82%AE%E7%AE%B1">首先是能访问海外网站的电脑上要能成功登陆所授权的gmail邮箱：</a></li>
+<li><a href="#%E9%80%9A%E8%BF%87%E7%82%B9%E5%87%BB%E4%B8%93%E5%B1%9E%E9%93%BE%E6%8E%A5%E7%99%BB%E5%85%A5gcp%E4%BA%91%E5%B9%B3%E5%8F%B0">通过点击专属链接登入GCP云平台：</a></li>
+<li><a href="#%E5%88%9B%E5%BB%BAvm%E5%AE%9E%E4%BE%8B">创建VM实例：</a></li>
+<li><a href="#a%E5%9C%A8%E5%B7%A6%E4%BE%A7%E7%9A%84%E8%8F%9C%E5%8D%95%E4%B8%AD%E6%89%BE%E5%88%B0-compute-engine-%E8%99%9A%E6%8B%9F%E6%9C%BA-%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%9E%E4%BE%8B-%E5%88%9B%E5%BB%BAvm%E5%AE%9E%E4%BE%8B">a在左侧的菜单中找到 Compute Engine –虚拟机-虚拟机实例-创建VM实例</a></li>
+<li><a href="#b%E9%80%9A%E8%BF%87%E5%88%9B%E5%BB%BA%E5%AE%9E%E4%BE%8B%E6%88%96%E8%80%85%E5%8D%95%E5%87%BB%E5%8A%A0%E5%8F%B7%E6%9D%A5%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%99%9A%E6%8B%9F%E6%9C%BA">b通过<code>创建实例</code>或者单击加号来创建一个虚拟机。</a></li>
+<li><a href="#%E5%90%8D%E7%A7%B0%E9%9A%8F%E6%84%8F%E8%BE%93%E5%85%A5%E6%9C%BA%E5%99%A8%E5%90%8D%E7%A7%B0">·     名称：随意输入，机器名称</a></li>
+<li><a href="#%E5%8C%BA%E5%9F%9F%E5%BB%BA%E8%AE%AE%E6%96%B0%E5%8A%A0%E5%9D%A1asia-southeast-b">·     区域：建议新加坡asia-southeast-b</a></li>
+<li><a href="#%E6%9C%BA%E5%99%A8%E9%85%8D%E7%BD%AE%E9%80%9A%E7%94%A8%E7%B3%BB%E5%88%97-e2-medium2-vcpu-4gb-ram">·     机器配置：通用系列 – E2-medium(2 vCPU, 4GB RAM)</a></li>
+<li><a href="#%E5%90%AF%E5%8A%A8%E7%A3%81%E7%9B%98%E5%8D%95%E5%87%BB%E6%9B%B4%E6%94%B9-centos-7">·     启动磁盘单击更改 – <em><strong>*CentOS 7*</strong></em></a></li>
+<li><a href="#%E9%98%B2%E7%81%AB%E5%A2%99%E5%85%81%E8%AE%B8http%E6%B5%81%E9%87%8F%E5%85%81%E8%AE%B8https%E6%B5%81%E9%87%8F%E4%B8%80%E5%AE%9A%E8%AE%B0%E5%BE%97%E5%8B%BE%E9%80%89">·     <em><strong>*防火墙：允许HTTP流量，允许HTTPS流量（一定记得勾选）*</strong></em></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by 51cloud.cloud
+ | 
+  <a class="rss" href="https://51yun.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

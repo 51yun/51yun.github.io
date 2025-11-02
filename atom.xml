@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://51yun.github.io</id>
+    <title>51云彩 云服务商</title>
+    <updated>2025-11-02T03:43:11.694Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://51yun.github.io"/>
+    <link rel="self" href="https://51yun.github.io/atom.xml"/>
+    <subtitle>云彩科技有限公司，是一家技术领先的企业级云服务商与上云解决方案提供商,官网 https://51cloud.cloud/</subtitle>
+    <logo>https://51yun.github.io/images/avatar.png</logo>
+    <icon>https://51yun.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2025, 51云彩 云服务商</rights>
+    <entry>
+        <title type="html"><![CDATA[AWS 配额申请]]></title>
+        <id>https://51yun.github.io/post/aws-pei-e-shen-qing/</id>
+        <link href="https://51yun.github.io/post/aws-pei-e-shen-qing/">
+        </link>
+        <updated>2025-11-02T02:51:42.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ECS 多ip配置]]></title>
+        <id>https://51yun.github.io/post/ecs-duo-ip-pei-zhi/</id>
+        <link href="https://51yun.github.io/post/ecs-duo-ip-pei-zhi/">
+        </link>
+        <updated>2025-11-02T02:44:22.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ECS修改密码]]></title>
+        <id>https://51yun.github.io/post/ecs-xiu-gai-mi-ma/</id>
+        <link href="https://51yun.github.io/post/ecs-xiu-gai-mi-ma/">
+        </link>
+        <updated>2025-11-02T02:39:22.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[阿里ecs的创建]]></title>
+        <id>https://51yun.github.io/post/a-li-ecs-de-chuang-jian/</id>
+        <link href="https://51yun.github.io/post/a-li-ecs-de-chuang-jian/">
+        </link>
+        <updated>2025-11-02T02:15:37.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS EC2服务器绑定弹性ip]]></title>
+        <id>https://51yun.github.io/post/aws-ec2-fu-wu-qi-bang-ding-dan-xing-ip/</id>
+        <link href="https://51yun.github.io/post/aws-ec2-fu-wu-qi-bang-ding-dan-xing-ip/">
+        </link>
+        <updated>2025-10-21T06:28:32.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS创建EC2服务器]]></title>
+        <id>https://51yun.github.io/post/aws-chuang-jian-ec2-fu-wu-qi/</id>
+        <link href="https://51yun.github.io/post/aws-chuang-jian-ec2-fu-wu-qi/">
+        </link>
+        <updated>2025-10-21T06:05:02.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Cloudfront 跨域配置]]></title>
+        <id>https://51yun.github.io/post/cloudfront-kua-yu-pei-zhi/</id>
+        <link href="https://51yun.github.io/post/cloudfront-kua-yu-pei-zhi/">
+        </link>
+        <updated>2025-10-21T05:57:47.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ CloudFront 静态页面托管]]></title>
+        <id>https://51yun.github.io/post/cloudfront-jing-tai-ye-mian-tuo-guan/</id>
+        <link href="https://51yun.github.io/post/cloudfront-jing-tai-ye-mian-tuo-guan/">
+        </link>
+        <updated>2025-10-21T05:42:23.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CloudFront   WAF的速率规则配置]]></title>
+        <id>https://51yun.github.io/post/waf-de-su-lu-gui-ze-pei-zhi/</id>
+        <link href="https://51yun.github.io/post/waf-de-su-lu-gui-ze-pei-zhi/">
+        </link>
+        <updated>2025-10-14T08:17:09.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CloudFront 配合S3的源 用来访问资源]]></title>
+        <id>https://51yun.github.io/post/cloudfront-pei-he-s3-de-yuan-yong-lai-fang-wen-zi-yuan/</id>
+        <link href="https://51yun.github.io/post/cloudfront-pei-he-s3-de-yuan-yong-lai-fang-wen-zi-yuan/">
+        </link>
+        <updated>2025-10-14T08:09:31.000Z</updated>
+    </entry>
+</feed>
